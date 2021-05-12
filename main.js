@@ -49,6 +49,7 @@ $(document).ready(function () {
             $("#TJ").css("text-shadow", "0 0 20px rgba(0,0,255,0.7)")
             $("#TJ").effect("shake")
             setTimeout(function () {
+                $("#TJ").html("ć")
                 $("#TJ").css("opacity", "unset");
                 $("#TJ").css("text-shadow", "unset")
             }, 400);
