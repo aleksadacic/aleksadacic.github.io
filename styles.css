@@ -19,7 +19,7 @@ body{
 }
 
 .naslov-large {
-    font-size: 10rem;
+    font-size: 8vw;
     align-content: start;
 }
 
@@ -32,14 +32,14 @@ body{
 /*}*/
 
 #aleksa {
-    letter-spacing: 20px;
+    letter-spacing: 1vw;
     line-height: 1 !important;
     position: relative;
     font-style: italic;
 }
 
 #dacic {
-    letter-spacing: 20px;
+    letter-spacing: 1vw;
     line-height: 1 !important;
     position: absolute;
     left: 65%;
