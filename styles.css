@@ -1,6 +1,7 @@
 #centerpiece {
     position: relative;
-    top: 0;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 body{
@@ -19,4 +20,28 @@ body{
 
 .naslov-large {
     font-size: 10rem;
+    align-content: start;
+}
+
+/*.ad-cont {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-around;*/
+/*    width: 50%;*/
+/*    margin: auto;*/
+/*}*/
+
+#aleksa {
+    letter-spacing: 20px;
+    line-height: 1 !important;
+    position: relative;
+    font-style: italic;
+}
+
+#dacic {
+    letter-spacing: 20px;
+    line-height: 1 !important;
+    position: absolute;
+    left: 65%;
+    font-style: italic;
 }
