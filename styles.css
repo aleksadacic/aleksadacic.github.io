@@ -1,12 +1,18 @@
-#centerpiece {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-}
+/*#centerpiece {*/
+/*    position: relative;*/
+/*    top: 50%;*/
+/*    transform: translate(0, -50%);*/
+/*}*/
 
 body{
     height: 100vh;
     background-image: url("backgrnd.png");
+    overflow: hidden;
+}
+
+.aleksa-dacic {
+    font-size: 6rem;
+    font-family: "Verdana", Arial;
 }
 
 @keyframes grain {
@@ -22,13 +28,26 @@ body{
     90% { transform:translate(-10%, 10%) }
 }
 
+@keyframes rgb {
+    0%, 10% {color: white; transform:translate(0, 0); filter: blur(0)}
+    12% {color: red; transform:translate(-5%, 0); filter: blur(2px)}
+    13% {color: blue; transform:translate(5%, -2%); filter: blur(2px)}
+    14% {color: green}
+    16%,50% {color: white; transform:translate(0, 0); filter: blur(0)}
+    52% {color: blue; transform:translate(-5%, 0); filter: blur(2px)}
+    53% {color: red; transform:translate(5%, -2%); filter: blur(1px)}
+    54% {color: green; transform:translate(1%, -5%); filter: blur(4px)}
+    56%, 60% {color: white; transform:translate(0, 0); filter: blur(1px)}
+    60%, 100% {color: white; transform: translate(0, 0); filter: blur(0)}
+}
+
 .page-header:after {
     animation: grain 8s steps(10) infinite;
     content: "";
     background-image: url("noise.png");
     height: 300%;
     width: 300%;
-    opacity: 0.3;
+    opacity: 0.25;
     position: fixed;
     top: -100%;
     left: -50%;
@@ -44,48 +63,115 @@ body{
     cursor: pointer;
 }
 
-.naslov-large {
-    font-size: 8vw;
-    align-content: start;
-}
-
-/*.ad-cont {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-around;*/
-/*    width: 50%;*/
-/*    margin: auto;*/
-/*}*/
-
-#aleksa {
-    letter-spacing: 1vw;
+#aleksa, #dacic {
+    letter-spacing: 0.5vw;
     line-height: 1 !important;
-    position: relative;
-    font-style: italic;
     user-select: none;
+    font-style: italic;
+}
+#aleksa, #dacic {
+    animation-name: rgb;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-timing-function: steps(1, end);
 }
 
-#dacic {
-    letter-spacing: 1vw;
-    line-height: 1 !important;
+#centerpiece {
+    top: 50%;
+    transform: translate(0, -50%);
     position: absolute;
-    left: 65%;
-    font-style: italic;
-    user-select: none;
+    padding: 15%;
 }
 
 .compsci {
     color: grey;
     user-select: none;
-    font-size: 3vh;
+    font-size: 1.5rem;
 }
 
 .mail {
+    font-size: 1.2rem;
     color: darkgray;
-    font-size: 2vh;
 }
 
 .links {
-    font-size: 2vh;
+    user-select: none;
+    margin-right: 5px;
 }
 
+#CH:hover span {
+    display: none;
+}
+#CH:hover:after {
+    content: 'ч';
+    color: blue;
+    font-style: normal;
+}
+
+#TJ:hover span {
+    display: none;
+}
+#TJ:hover:after {
+    content: 'ћ';
+    color: red;
+    font-style: normal;
+}
+
+#D:hover span {
+    display: none;
+}
+#D:hover:after {
+    content: 'Д';
+    color: green;
+    font-style: normal;
+}
+
+#II:hover span {
+    display: none;
+}
+#II:hover:after {
+    content: 'и';
+    color: green;
+    font-style: normal;
+}
+
+#L:hover span {
+    display: none;
+}
+#L:hover:after {
+    content: 'л';
+    color: green;
+    font-style: normal;
+}
+
+#K:hover span {
+    display: none;
+}
+#K:hover:after {
+    content: 'к';
+    color: blue;
+    font-style: normal;
+}
+
+#SS:hover span {
+    display: none;
+}
+#SS:hover:after {
+    content: 'с';
+    color: red;
+    font-style: normal;
+}
+
+.work-links {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .aleksa-dacic { font-size: 2rem }
+
+    .compsci { font-size: 1.1rem }
+
+    .mail { font-size: 1rem }
+
+    .links { font-size: 0.9rem}
+}
