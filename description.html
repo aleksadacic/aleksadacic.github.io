@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+<script src="main.js"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="squared.css">
+<title>Aleksa Dačić</title>
+</head>
+<body style="background-color: black;">
+<div class="modal fade" id="mailModal" tabindex="-1" aria-labelledby="mailModalLabel" aria-hidden="true"><div class="modal-dialog shadow-beige w-25"><div class="modal-content">
+<div class="modal-body bg-black2" style="padding: 20px !important; color: darkgray;">
+aleksa.dacic99@gmail.com
+</div>
+<div class="modal-footer bg-black2">
+<button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">close</button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-100 h-100 d-none" id="modalBackground">
+</div>
+<div class="page-header"></div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+<div class="bg-light modalMoj d-none" id="exampleModal" tabindex="-1"aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-body modal-dialog"></div>
+</div>
+<div class="container-fluid">
+<a class="navbar-brand naslov" href="./" style="font-weight: bold;">АД</a>
+</div>
+</nav>
+</div>
+<div class="container-fluid h-100 album">
+<div class="row h-100"><div class="col-lg-2 p-0 m-0 d-flex flex-column sidenav">
+<div class="accordion p-4 pb-5" id="accordionExample">
+<div class="accordion-item pb-3">
+<div class="accordion-header" id="headingTwo">
+<div class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+class="bi bi-card-text mr-2" viewBox="0 0 16 16">
+<path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+<path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+</svg>
+about
+</div>
+</div>
+<a class="text-darkgray accordion-link pr-3" href="album-leto.html">leto</a><a class="text-darkgray accordion-link pr-3" href="album-b&w.html">b&w</a><div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+<div class="accordion-body pl-4 d-flex flex-column">
+<a class="text-darkgray accordion-link pr-3 ai-active" href="#">
+description
+</a>
+</div>
+</div>
+</div>
+<div class="accordion-item pb-3">
+<div class="accordion-header" id="headingWorks">
+<div class="accordion-button" type="button" data-bs-toggle="collapse"
+data-bs-target="#collapseWorks" aria-expanded="false" aria-controls="collapseWorks">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-journal-code mr-2" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z"/>
+<path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+<path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+</svg>
+works
+</div>
+</div>
+<div id="collapseWorks" class="accordion-collapse collapse" aria-labelledby="headingWorks">
+<div class="accordion-body pl-4 d-flex flex-column">
+</div>
+</div>
+</div>
+<div class="accordion-item pb-3">
+<div class="accordion-header" id="headingContact">
+<div class="accordion-button" type="button" data-bs-toggle="collapse"
+data-bs-target="#collapseContact" aria-expanded="false" aria-controls="collapseContact">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope mr-2" viewBox="0 0 16 16">
+<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+</svg>
+contact
+</div>
+</div>
+<div id="collapseContact" class="accordion-collapse collapse" aria-labelledby="headingContact">
+<div class="accordion-body pl-4 d-flex flex-column">
+<a class="text-darkgray accordion-link pr-3" href="https://www.linkedin.com/in/aleksadacic/" target="_blank">
+linkedin
+</a>
+<a class="text-darkgray accordion-link pr-3" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#mailModal">
+mail
+</a>
+</div>
+</div>
+</div>
+<div class="accordion-item pb-3">
+<div class="accordion-header" id="headingOne">
+<div class="accordion-button" type="button" data-bs-toggle="collapse"
+data-bs-target="#collapseOne" aria-expanded="false"
+aria-controls="collapseOne">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-images mr-2" viewBox="0 0 16 16">
+<path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+<path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
+</svg>
+photography
+</div>
+</div>
+<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+<div class="accordion-body pl-4 d-flex flex-column">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-8 p-0 m-0 all-photos" style="overflow: auto;">
+<div class="container-fluid mt-4">
+<div class ="row album-heading">
+description</div><div class="text-darkgray fst-italic">temporarily unavailable</div></div>
+</div>
+< div class ="col-lg-2" >
+< / div >
+</div>
+</div>
+<script>
+$(document).ready(function () {
+$(".photograph").click(function (e) {
+if ($("#exampleModal").hasClass("aktivan")) {
+if (!$(e.target).hasClass("modalMoj")) {
+closeModal();
+}
+return;
+}
+$("#exampleModal").toggleClass("d-none");
+$("#exampleModal").toggleClass("aktivan");
+$("#modalBackground").toggleClass("d-none");
+let clone = $(this).clone();
+clone.appendTo(".modal-body");
+});
+$(document).keyup(function escapePhoto(e) {
+if (e.key === "Escape") {
+if (!$("#exampleModal").hasClass("d-none")) {
+closeModal();
+}
+}
+});
+});
+let closeModal = function () {
+$(".modal-body").empty();
+$("#exampleModal").toggleClass("aktivan");
+$("#exampleModal").toggleClass("d-none");
+$("#modalBackground").toggleClass("d-none");
+}
+$("#modalBackground").click(function (e) {
+if (!$(e.target).hasClass("modalMoj")) {
+closeModal(e);
+}
+});
+</script>
+<script>
+if (window.history.replaceState) {
+window.history.replaceState(null, null, window.location.href);
+}
+</script>
+</body>
+</html>

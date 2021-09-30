@@ -5,7 +5,7 @@
 /*}*/
 
 body{
-    height: 100vh;
+    height: 100vh !important;
     background-image: url("backgrnd.png");
     overflow: hidden;
 }
@@ -51,6 +51,14 @@ body{
     position: fixed;
     top: -100%;
     left: -50%;
+}
+
+.naslov {
+    animation-name: rgb;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-timing-function: steps(1, end);
+    font-size: 2.5rem !important;
 }
 
 .animacija {
@@ -166,6 +174,106 @@ body{
     margin-bottom: 10px;
 }
 
+.sidenav {
+    height: 100%;
+    overflow: auto;
+}
+
+.accordion-button {
+    background: transparent;
+    border: none;
+    color: darkgray;
+    font-weight: bold;
+    line-height: 3;
+}
+
+.accordion-button:hover {
+    color: lightgray;
+}
+
+.text-darkgray {
+    color: darkgray;
+}
+
+.text-darkgray:hover {
+    color: lightgray;
+    border: none;
+    text-decoration: unset;
+}
+
+.btn-modal-close {
+    background-color: transparent;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.btn-modal-close:hover, .btn-modal-close:active, .btn-modal-close:focus {
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    box-shadow: none;
+}
+
+.shadow-beige {
+    webkit-box-shadow: 0 0 100px beige;
+    -moz-box-shadow: 0 0 100px beige;
+    box-shadow: 0 0 100px beige;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-content {
+    border: none;
+}
+
+.btn-modal-close:hover {
+    font-weight: bold;
+}
+
+.accordion-body > a {
+    padding-left: 6px;
+}
+
+.accordion-link {
+    padding: 10px;
+    padding-left: unset;
+}
+
+.ai-active, .ai-active:hover {
+    color: whitesmoke;
+}
+
+.accordion-button:active, .accordion-button:focus {
+    border: none;
+}
+
+.album-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkgray;
+    user-select: none;
+    padding: 16px;
+}
+
+.all-photos {
+    height: 85%;
+    padding: 50px;
+}
+
+.mail-button, .mail-button:focus, .mail-button:active {
+    background: transparent;
+    border: none;
+}
+
+#mailModal .modal-dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media (max-width: 768px) {
     .aleksa-dacic { font-size: 2rem }
 
@@ -174,4 +282,42 @@ body{
     .mail { font-size: 1rem }
 
     .links { font-size: 0.9rem}
+}
+
+
+@media (max-width: 1091px) {
+    .accordion-button, .accordion-link {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidenav {
+        min-height: 0;
+        height: unset;
+        flex-direction: row !important;
+        justify-content: space-evenly;
+    }
+
+    .accordion-link, .accordion-button {
+        font-size: 1rem;
+    }
+
+    .accordion {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        width: 100%;
+        padding-bottom: 1.5rem !important;
+        padding-top: 0 !important;
+    }
+
+    .accordion-item {
+        padding: 0 !important;
+        padding-right: 2vw !important;
+    }
+
+    .row {
+        height: unset !important;
+    }
 }
