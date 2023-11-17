@@ -179,7 +179,7 @@ body {
 }
 
 .page-bg-fade-animation:after {
-    animation: page-bg-fade 4s steps(10) 1;
+    animation: page-bg-fade 3.5s steps(1, end) 1;
     content: "";
     background-image: none;
     height: 300%;
