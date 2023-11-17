@@ -1,10 +1,4 @@
-/*#centerpiece {*/
-/*    position: relative;*/
-/*    top: 50%;*/
-/*    transform: translate(0, -50%);*/
-/*}*/
-
-body{
+body {
     height: 100vh !important;
     background-image: url("backgrnd.png");
     overflow: hidden;
@@ -16,29 +10,141 @@ body{
 }
 
 @keyframes grain {
-    0%, 100% { transform:translate(0, 0) }
-    10% { transform:translate(-5%, -10%) }
-    20% { transform:translate(-15%, 5%) }
-    30% { transform:translate(7%, -25%) }
-    40% { transform:translate(-5%, 25%) }
-    50% { transform:translate(-15%, 10%) }
-    60% { transform:translate(15%, 0%) }
-    70% { transform:translate(0%, 15%) }
-    80% { transform:translate(3%, 35%) }
-    90% { transform:translate(-10%, 10%) }
+    0%, 100% {
+        transform: translate(0, 0)
+    }
+    10% {
+        transform: translate(-5%, -10%)
+    }
+    20% {
+        transform: translate(-15%, 5%)
+    }
+    30% {
+        transform: translate(7%, -25%)
+    }
+    40% {
+        transform: translate(-5%, 25%)
+    }
+    50% {
+        transform: translate(-15%, 10%)
+    }
+    60% {
+        transform: translate(15%, 0%)
+    }
+    70% {
+        transform: translate(0%, 15%)
+    }
+    80% {
+        transform: translate(3%, 35%)
+    }
+    90% {
+        transform: translate(-10%, 10%)
+    }
 }
 
 @keyframes rgb {
-    0%, 10% {color: white; transform:translate(0, 0); filter: blur(0)}
-    12% {color: red; transform:translate(-5%, 0); filter: blur(2px)}
-    13% {color: blue; transform:translate(5%, -2%); filter: blur(2px)}
-    14% {color: green}
-    16%,50% {color: white; transform:translate(0, 0); filter: blur(0)}
-    52% {color: blue; transform:translate(-5%, 0); filter: blur(2px)}
-    53% {color: red; transform:translate(5%, -2%); filter: blur(1px)}
-    54% {color: green; transform:translate(1%, -5%); filter: blur(4px)}
-    56%, 60% {color: white; transform:translate(0, 0); filter: blur(1px)}
-    60%, 100% {color: white; transform: translate(0, 0); filter: blur(0)}
+    0%, 10% {
+        color: white;
+        transform: translate(0, 0);
+        filter: blur(0)
+    }
+    12% {
+        color: red;
+        transform: translate(-5%, 0);
+        filter: blur(2px)
+    }
+    13% {
+        color: blue;
+        transform: translate(5%, -2%);
+        filter: blur(2px)
+    }
+    14% {
+        color: green
+    }
+    16%, 50% {
+        color: white;
+        transform: translate(0, 0);
+        filter: blur(0)
+    }
+    52% {
+        color: blue;
+        transform: translate(-5%, 0);
+        filter: blur(2px)
+    }
+    53% {
+        color: red;
+        transform: translate(5%, -2%);
+        filter: blur(1px)
+    }
+    54% {
+        color: green;
+        transform: translate(1%, -5%);
+        filter: blur(4px)
+    }
+    56%, 60% {
+        color: white;
+        transform: translate(0, 0);
+        filter: blur(1px)
+    }
+    60%, 100% {
+        color: white;
+        transform: translate(0, 0);
+        filter: blur(0)
+    }
+}
+
+@keyframes alt-page {
+    0%, 10% {
+        color: white;
+        transform: translate(0, -50%);
+        filter: blur(0)
+    }
+    12% {
+        color: red;
+        transform: translate(-5%, -41%);
+        filter: blur(2px)
+    }
+    13% {
+        color: blue;
+        transform: translate(5%, -50%);
+        filter: blur(2px)
+    }
+    14% {
+        color: green
+    }
+    16%, 50% {
+        color: white;
+        transform: translate(0, -45%);
+        filter: blur(10px)
+    }
+    52% {
+        color: blue;
+        transform: translate(-5%, -54%);
+        filter: blur(20px)
+    }
+    53% {
+        color: red;
+        transform: translate(5%, -51%);
+        filter: blur(30px)
+    }
+    54% {
+        color: green;
+        transform: translate(1%, -59%);
+        filter: blur(20px)
+    }
+    56%, 60% {
+        color: white;
+        transform: translate(0, -50%);
+        filter: blur(10px)
+    }
+    60%, 100% {
+        color: white;
+        transform: translate(0, -50%);
+        filter: blur(20px)
+    }
+    100% {
+        display: none !important
+    }
 }
 
 .page-header:after {
@@ -51,6 +157,34 @@ body{
     position: fixed;
     top: -100%;
     left: -50%;
+}
+
+.alt-page-animation {
+    animation-name: alt-page !important;
+    animation-iteration-count: 1 !important;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+}
+
+.alt-page-aleksa-dacic {
+    font-size: 3rem;
+}
+
+.about-container {
+    width: 40vw;
+    height: 70vw;
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    color: white;
+    animation: show 0s 1s forwards;
+    visibility: hidden;
+}
+
+@keyframes show {
+    to {
+        visibility: visible;
+    }
 }
 
 .naslov {
@@ -77,6 +211,7 @@ body{
     user-select: none;
     font-style: italic;
 }
+
 #aleksa, #dacic {
     animation-name: rgb;
     animation-iteration-count: infinite;
@@ -110,6 +245,7 @@ body{
 #CH:hover span {
     display: none;
 }
+
 #CH:hover:after {
     content: 'ч';
     color: blue;
@@ -119,6 +255,7 @@ body{
 #TJ:hover span {
     display: none;
 }
+
 #TJ:hover:after {
     content: 'ћ';
     color: red;
@@ -128,6 +265,7 @@ body{
 #D:hover span {
     display: none;
 }
+
 #D:hover:after {
     content: 'Д';
     color: green;
@@ -137,6 +275,7 @@ body{
 #II:hover span {
     display: none;
 }
+
 #II:hover:after {
     content: 'и';
     color: green;
@@ -146,6 +285,7 @@ body{
 #L:hover span {
     display: none;
 }
+
 #L:hover:after {
     content: 'л';
     color: green;
@@ -155,6 +295,7 @@ body{
 #K:hover span {
     display: none;
 }
+
 #K:hover:after {
     content: 'к';
     color: blue;
@@ -164,6 +305,7 @@ body{
 #SS:hover span {
     display: none;
 }
+
 #SS:hover:after {
     content: 'с';
     color: red;
@@ -275,13 +417,21 @@ body{
 }
 
 @media (max-width: 768px) {
-    .aleksa-dacic { font-size: 2rem }
+    .aleksa-dacic {
+        font-size: 2rem
+    }
 
-    .compsci { font-size: 1.1rem }
+    .compsci {
+        font-size: 1.1rem
+    }
 
-    .mail { font-size: 1rem }
+    .mail {
+        font-size: 1rem
+    }
 
-    .links { font-size: 0.9rem}
+    .links {
+        font-size: 0.9rem
+    }
 }
 
 
