@@ -20,57 +20,63 @@
     <title>Aleksa Dačić</title>
 </head>
 <body style="background-color: black">
-<div class="page-header"></div>
+<div class="page-bg-fade-animation"></div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <div class="bg-light modalMoj d-none" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-body modal-dialog"></div>
+    </div>
+    <div class="container-fluid">
+        <div class="d-flex flex-row align-items-center">
+            <a class="navbar-brand naslov" href="index.html" style="font-weight: bold;">АД</a>
+            <div class="d-flex flex-row pl-2">
+                <div class="links"><a class="text-danger"
+                                      href="index.html">home</a>
+                </div>
+                <div class="links"><a class="text-success" href="javascript:void(0)" data-bs-toggle="tooltip"
+                                      data-bs-placement="left" title="temporarily unavailable"
+                                      style="cursor:default">works</a>
+                </div>
+                <div class=" links"><a class="text-primary"
+                                       href="https://www.linkedin.com/in/aleksadacic/"
+                                       target="_blank">linkedin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
 <div class="container-fluid" id="centerpiece">
-    <div class="row m-auto aleksa-dacic alt-page-aleksa-dacic alt-page-animation text-light">
-        <div class="col-xl-12 p-0 d-flex flex-row">
-            <div class="d-flex flex-row justify-content-end mr-2" id="aleksa">
-                <div>A</div>
-                <div id="L"><span>l</span></div>
-                <div>e</div>
-                <div id="K"><span>k</span></div>
-                <div id="SS"><span>s</span></div>
-                <div>a</div>
-            </div>
-            <div id="dacic" class="d-flex flex-row justify-content-start">
-                <div id="D"><span>D</span></div>
-                <div>a</div>
-                <div id="CH"><span>č</span></div>
-                <div id="II"><span>i</span></div>
-                <div id="TJ"><span>ć</span></div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-12">
-            <div class="compsci">
-                Software Engineer
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-12">
-            <div class="mail">
-                aleksa.dacic99@gmail.com
-            </div>
-        </div>
-    </div>
     <div class="row">
         <div class="col-xl-12">
             <div class="container-fluid p-0 mt-4">
                 <div class="d-flex flex-column">
-                    <div class="d-flex flex-row">
-                        <div class="links"><a class="text-danger"
-                                              href="index.html"
-                                              style="cursor:default;">home</a>
+                    <div class="about-container" style="display: flex; flex-direction: column;">
+                        <div style="padding-bottom: 50px">
+                            <span style="font-weight: bold">Software engineer</span> with three years of industry
+                            experience.
+                            <br><br>Committed to ongoing
+                            learning in software engineering, architecture, clean coding practices, and
+                            teamwork.
+                            <br><br>Recognized for creativity, commitment, and reliability,
+                            seeking new opportunities to contribute to innovative projects and further
+                            develop expertise in the software engineering industry.
                         </div>
-                        <div class="links"><a class="text-success" href="javascript:void(0)" data-bs-toggle="tooltip"
-                                              data-bs-placement="left" title="temporarily unavailable"
-                                              style="cursor:default">works</a>
+                        <div>
+                            <p>
+                                Skills:
+                                Programming Languages
+                                (Java, JS, TS, C, Python, SQL),
+                                Git,
+                                Frameworks (Spring Boot,
+                                Angular, JAX-RS),
+                                Troubleshooting,
+                                Communication, Presentation,
+                                Documentation
+                            </p>
                         </div>
-                        <div class=" links"><a class="text-primary"
-                                               href="https://www.linkedin.com/in/aleksadacic/"
-                                               target="_blank">linkedin</a>
+
+                        <div class="mail mt-4">
+                            aleksa.dacic99@gmail.com
                         </div>
                     </div>
                 </div>
@@ -82,31 +88,6 @@
                 return new bootstrap.Tooltip(tooltipTriggerEl)
             });
         </script>
-    </div>
-</div>
-
-<div class="about-container" style="display: flex; flex-direction: column;">
-    <div style="padding-bottom: 50px">
-        <span style="font-weight: bold">Software engineer</span> with three years of industry experience.
-        <br><br>Committed to ongoing
-        learning in software engineering, architecture, clean coding practices, and
-        teamwork.
-        <br><br>Recognized for creativity, commitment, and reliability,
-        seeking new opportunities to contribute to innovative projects and further
-        develop expertise in the software engineering industry.
-    </div>
-    <div>
-        <p>
-            Skills:
-            Programming Languages
-            (Java, JS, TS, C, Python, SQL),
-            Git,
-            Frameworks (Spring Boot,
-            Angular, JAX-RS),
-            Troubleshooting,
-            Communication, Presentation,
-            Documentation
-        </p>
     </div>
 </div>
 </body>
