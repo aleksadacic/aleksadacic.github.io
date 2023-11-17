@@ -178,7 +178,7 @@ body {
     animation: show 0.4s steps(1, end);
 }
 
-.page-bg-fade-animation {
+.page-bg-fade-animation:after {
     animation: page-bg-fade 2s steps(10) 1;
     content: "";
     background-image: none;
