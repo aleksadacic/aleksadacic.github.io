@@ -196,15 +196,15 @@ body {
     }
     20% {
         transform: translate(-15%, 5%);
-        filter: blur(10px) brightness(80%);
+        filter: brightness(80%);
     }
     40% {
         transform: translate(-5%, 25%);
-        filter: blur(1px) brightness(60%);
+        filter: brightness(60%);
     }
     60% {
         transform: translate(15%, 0%);
-        filter: blur(5px) brightness(40%);
+        filter: brightness(40%);
     }
     80% {
         transform: translate(3%, 35%);
