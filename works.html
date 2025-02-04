@@ -15,7 +15,6 @@
             crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="main.js"></script>
-
     <link rel="stylesheet" href="styles.css">
     <title>Aleksa Dačić</title>
 </head>
@@ -44,49 +43,41 @@
         </div>
     </div>
 </nav>
-<div class="container-fluid" id="centerpiece">
-    <div class="row">
-        <div class="col-xl-12">
+<div class="container-fluid works-container">
+    <div class="row mb-5">
+        <div class="col-6">
             <div class="container-fluid p-0 mt-4">
-                <div class="d-flex flex-column">
-                    <div class="about-container" style="display: flex; flex-direction: column;">
-                        <div style="padding-bottom: 50px">
-                            <span style="font-weight: bold">Software engineer</span> with three years of industry
-                            experience.
-                            <br><br>Committed to ongoing
-                            learning in software engineering, architecture, clean coding practices, and
-                            teamwork.
-                            <br><br>Recognized for creativity, commitment, and reliability,
-                            always seeking new opportunities to contribute to innovative projects.
-                        </div>
-                        <div>
-                            <p>
-                                <b>Expertise:</b>
-                                <br>
-                                <br>Programming Languages (Java, JS, TS, C, Python),
-                                <br>SQL and NoSQL databases,
-                                <br>Frameworks (Spring, Angular, Django),
-                                <br>Git,
-                                <br>Debugging,
-                                <br>Communication,
-                                <br>Presentation,
-                                <br>Documentation
-                            </p>
-                        </div>
-
-                        <div class="mail mt-4">
-                            aleksa.dacic99@gmail.com
-                        </div>
-                    </div>
+                <div class="text-white display-4 mb-3">data querying</div>
+                <div class="mb-3 p">
+                    <a href="https://github.com/aleksadacic/DataQuerying">https://github.com/aleksadacic/DataQuerying</a>
+                </div>
+                <div class="text-white">
+                    <b>Data Querying</b> is a lightweight and intuitive library designed to make dynamic query building
+                    in <b>Spring Data JPA effortless</b>.
+                    <br><br>
+                    Instead of manually crafting complex queries, this library provides a clean and type-safe DSL to
+                    construct JPA queries at runtime. With objects like Query and SearchRequest, you can filter, sort,
+                    and paginate data dynamically, all while keeping your code readable and maintainable.
                 </div>
             </div>
         </div>
-        <script>
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl)
-            });
-        </script>
+    </div>
+    <div class="row mb-5">
+        <div class="col-6">
+            <div class="container-fluid p-0 mt-4">
+                <div class="text-white display-4 mb-3">katarinadacic.com</div>
+                <div class="mb-3 p">
+                    <a href="https://katarinadacic.com">https://katarinadacic.com</a>
+                </div>
+                <div class="text-white">
+                    Designed and developed a modern, responsive website for <b>Katarina Dačić</b>, an interior,
+                    exhibition, and set designer.
+                    <br><br>
+                    Built using <b>Angular</b> and <b>Firebase</b>, the site showcases her portfolio with a modern user
+                    experience.
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
