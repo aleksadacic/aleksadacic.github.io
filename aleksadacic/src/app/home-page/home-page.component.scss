@@ -12,9 +12,7 @@
 
 .aleksa-dacic {
   font-size: 6rem;
-  font-family: "Verdana", Arial, serif;
 }
-
 
 #CH:hover span {
   display: none;
@@ -91,4 +89,14 @@
   transform: translate(0, -50%);
   position: absolute;
   margin-left: 5rem;
+}
+
+@media screen and (max-width: 760px) {
+  .aleksa-dacic {
+    font-size: 3rem;
+  }
+
+  #centerpiece {
+    margin-left: 2rem;
+  }
 }
