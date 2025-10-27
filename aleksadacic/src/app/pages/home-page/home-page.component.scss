@@ -1,0 +1,91 @@
+
+#aleksa, #dacic {
+  line-height: 1 !important;
+  user-select: none;
+  animation-name: rgb;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  animation-timing-function: steps(1, end);
+}
+
+.subtitle {
+  letter-spacing: 0.5rem;
+  text-align: center;
+  filter: blur(1.5px);
+}
+
+.aleksa-dacic {
+  font-size: 5rem;
+  -webkit-text-stroke: 2px black;
+  filter: blur(1.5px);
+}
+
+#CH:hover span {
+  display: none;
+}
+
+#CH:hover:after {
+  content: 'Ч';
+  color: blue;
+  font-style: normal;
+}
+
+#TJ:hover span {
+  display: none;
+}
+
+#TJ:hover:after {
+  content: 'Ћ';
+  color: red;
+  font-style: normal;
+}
+
+#D:hover span {
+  display: none;
+}
+
+#D:hover:after {
+  content: 'Д';
+  color: green;
+  font-style: normal;
+}
+
+#II:hover span {
+  display: none;
+}
+
+#II:hover:after {
+  content: 'И';
+  color: green;
+  font-style: normal;
+}
+
+#L:hover span {
+  display: none;
+}
+
+#L:hover:after {
+  content: 'Л';
+  color: green;
+  font-style: normal;
+}
+
+#SS:hover span {
+  display: none;
+}
+
+#SS:hover:after {
+  content: 'С';
+  color: red;
+  font-style: normal;
+}
+
+@media screen and (max-width: 760px) {
+  .aleksa-dacic {
+    font-size: 3rem;
+  }
+
+  #centerpiece {
+    margin-left: 2rem;
+  }
+}

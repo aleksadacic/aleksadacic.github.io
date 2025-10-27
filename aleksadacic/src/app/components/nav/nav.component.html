@@ -1,0 +1,23 @@
+<div class="absolute text-3xl flex flex-row" style="top: 5%; left: 5%">
+    <div class="flex flex-row align-items-center">
+
+        @if (logo) {
+            <div class="logo">
+                <a class="text-3xl md:text-5xl rgb-shake-animation font-bold no-underline mr-4" href="/">АД</a>
+            </div>
+        }
+        <div class="flex flex-col items-center" style="filter: blur(1px)">
+            <div class="text-2xl inline px-3 font-bold" [style.background-color]="color">
+                {{ page }}
+            </div>
+            <app-clock/>
+        </div>
+    </div>
+</div>
+
+<div class="absolute text-3xl flex flex-col items-end gap-5 z-5" style="right: 5%; top: 5%">
+    <div class="select-none mr-2">
+        <span class="menu-item font-mono"
+              style="color: green; text-shadow: green 0 2px 4px">CH {{ channelNumber }}</span>
+    </div>
+</div>

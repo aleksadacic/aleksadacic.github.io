@@ -1,0 +1,73 @@
+<div
+        class="absolute mx-auto w-full flex items-center justify-center text-2xl font-bold select-none font-mono"
+        style="filter: blur(1px); bottom: 5%"
+>
+    @if (!open()) {
+        <div style="background: blue" class="p-2 w-1/2 cursor-pointer flex justify-center" (click)="open.set(true)">
+            MENU
+        </div>
+    }
+
+    @if (open()) {
+        <div class="w-1/2 flex-col">
+            <div style="background: blue" class="flex flex-row py-2 px-4 justify-between">
+                ALL CHANNELS
+                <div class="flex flex-row gap-2 cursor-pointer" style="color: green" (click)="open.set(false)">
+                    EXIT
+                    <img ngSrc="assets/icons/exit.svg" alt="EXIT" width="24" height="24">
+                </div>
+            </div>
+            <div
+                #menuBtn
+                class="flex flex-col mt-1 w-full py-2 px-4 menu-button"
+                role="menuitem"
+                tabindex="-1"
+                (click)="navigate('1')"
+            >
+                <div class="flex flex-row justify-between items-center cursor-pointer">
+                    <span>ABOUT</span>
+                    <span class="font-mono">01</span>
+                </div>
+            </div>
+            <div
+                #menuBtn
+                class="flex flex-col w-full py-2 px-4 cursor-pointer menu-button"
+                (click)="navigate('2')"
+                role="menuitem"
+                tabindex="-1"
+            >
+                <div class="flex flex-row justify-between items-center">
+                    <span>WORKS</span>
+                    <span class="font-mono">02</span>
+                </div>
+            </div>
+            <div
+                #menuBtn
+                class="flex flex-col w-full py-2 px-4 cursor-pointer menu-button"
+                (click)="navigate('3')"
+                role="menuitem"
+                tabindex="-1"
+            >
+                <div class="flex flex-row justify-between items-center">
+                    <span>CREATIVE</span>
+                    <span class="font-mono">03</span>
+                </div>
+            </div>
+            <div style="background: blue" class="flex flex-col w-full py-2 px-4 mt-1">
+                <div class="flex flex-row justify-between items-center" style="color: green">
+                    SELECT
+                    <div class="flex flex-row gap-6">
+                        <div class="flex flex-row">
+                            UP
+                            <img ngSrc="assets/icons/caret-up.svg" alt="UP" width="32" height="32">
+                        </div>
+                        <div class="flex flex-row">
+                            DOWN
+                            <img ngSrc="assets/icons/caret-down.svg" alt="DOWN" width="32" height="32">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

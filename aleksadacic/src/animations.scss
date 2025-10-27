@@ -1,35 +1,50 @@
 @keyframes grain {
-  0%, 100% {
-    transform: translate(0, 0)
+  0% {
+    transform: rotate(0deg);
   }
-  10% {
-    transform: translate(-5%, -10%)
+  12.5% {
+    transform: rotate(45deg);
   }
-  20% {
-    transform: translate(-15%, 5%)
+  25% {
+    transform: rotate(90deg);
   }
-  30% {
-    transform: translate(7%, -25%)
-  }
-  40% {
-    transform: translate(-5%, 25%)
+  37.5% {
+    transform: rotate(135deg);
   }
   50% {
-    transform: translate(-15%, 10%)
+    transform: rotate(180deg);
   }
-  60% {
-    transform: translate(15%, 0%)
+  62.5% {
+    transform: rotate(225deg);
   }
-  70% {
-    transform: translate(0%, 15%)
+  75% {
+    transform: rotate(270deg);
   }
-  80% {
-    transform: translate(3%, 35%)
+  87.5% {
+    transform: rotate(315deg);
   }
-  90% {
-    transform: translate(-10%, 10%)
+  100% {
+    transform: rotate(360deg);
   }
 }
+
+@keyframes stripe-frames {
+  0% {
+    top: -20vh;
+  }
+  40% {
+    top: 120vh; /* finishes movement in 4s out of 9s total (≈44%) */
+  }
+  100% {
+    top: 120vh; /* stays here for remaining 5s */
+  }
+}
+
+.stripe {
+  position: absolute;
+  animation: stripe-frames 9s linear infinite;
+}
+
 
 @keyframes rgb {
   0%, 10% {
@@ -85,7 +100,7 @@
 @keyframes page-bg-fade {
   0% {
     filter: brightness(100%);
-    background-image: url("assets/noise.png");
+    background-image: url("assets/noise.webp");
   }
   20% {
     transform: translate(-15%, 5%);

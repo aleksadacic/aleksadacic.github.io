@@ -1,0 +1,13 @@
+.menu-button {
+  background: blue;
+}
+
+.menu-button:hover {
+  background: green;
+}
+
+.menu-button.selected,
+.menu-button[data-selected="true"] {
+  background: green;
+  outline: green solid;
+}
