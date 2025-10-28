@@ -1,30 +1,21 @@
-import {Component, inject, Input, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {UntilDestroy, untilDestroyed} from "@ngneat/until-destroy";
+import {Component, Input} from '@angular/core';
+import {UntilDestroy} from "@ngneat/until-destroy";
 import {ClockComponent} from "../clock/clock.component";
+import {RouterLink} from "@angular/router";
 
 @UntilDestroy()
 @Component({
     selector: 'app-nav',
     standalone: true,
     imports: [
-        ClockComponent
+        ClockComponent,
+        RouterLink
     ],
     templateUrl: './nav.component.html',
     styleUrl: './nav.component.scss'
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
     @Input() logo: boolean = true;
     @Input() page: string = "";
     @Input() color: string = "blue"
-    channelNumber?: string;
-    private readonly route = inject(ActivatedRoute);
-
-    ngOnInit() {
-        this.route.url
-            .pipe(untilDestroyed(this))
-            .subscribe(url => {
-                this.channelNumber = url[0].toString();
-            })
-    }
 }

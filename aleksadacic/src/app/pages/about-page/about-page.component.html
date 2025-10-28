@@ -26,11 +26,15 @@
             </p>
         </div>
     </div>
-    <div class="flex flex-row justify-between text-3xl p-4 items-center"
-         style="background: blue; height: 50px; filter: blur(1px)">
-        <div class="flex flex-row gap-20">
-            <a class="font-mono">aleksa.dacic99&#64;gmail.com</a>
-            <!--            TODO on click copy-->
+    <div class="flex flex-row justify-between text-3xl p-4 items-center copy-trigger cursor-pointer"
+         style="background: blue; height: 50px; filter: blur(1px)" (click)="copyToClipboard(email.innerText)">
+        <div class="flex flex-row gap-2">
+            <span class="font-mono" #email>aleksa.dacic99&#64;gmail.com</span>
+            <img class="copy-icon" style="visibility: hidden" ngSrc="assets/icons/copy.svg" alt="COPY" height="36"
+                 width="28" fetchpriority="high">
         </div>
+        @if (successVisible) {
+            <span style="color: green" class="font-mono font-bold">COPIED TO CLIPBOARD</span>
+        }
     </div>
 </div>

@@ -19,6 +19,10 @@ export const routes: Routes = [
         component: WorksPageComponent
     },
     {
+        path: "0",
+        redirectTo: ""
+    },
+    {
         path: "",
         component: HomePageComponent
     },

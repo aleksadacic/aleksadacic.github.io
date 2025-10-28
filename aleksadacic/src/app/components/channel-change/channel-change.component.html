@@ -1,4 +1,11 @@
-<input
-        class="transparent text-3xl font-bold p-3 absolute channel-change-input"
-        [maxLength]="2"
->
+@if (visible()) {
+    <div style="color: green; filter: blur(1px);"
+         class="text-5xl font-extrabold select-none font-mono"
+    >
+        <span class="menu-item font-mono"
+              style="color: green; text-shadow: green 0 2px 4px">CH {{ buffer() }}</span>
+    </div>
+
+    <!-- optional ghost input you already had; kept hidden but present -->
+    <input class="channel-change-input" [maxLength]="maxDigits" aria-hidden="true" tabindex="-1">
+}

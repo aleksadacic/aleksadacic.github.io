@@ -40,12 +40,12 @@ body {
 .grain-animation:after {
   animation: grain 0.5s steps(1) infinite;
   content: "";
-  background-image: url("assets/noise.webp");
+  background-image: url("assets/noise-lg.webp");
   height: 300vh;
   width: 300vw;
-  opacity: 0.25;
+  opacity: 0.1;
   position: fixed;
-  filter: contrast(110%);
+  filter: blur(1px) contrast(90%);
   top: -100vh;
   left: -100vw;
 }
