@@ -2,7 +2,7 @@ import {Routes} from '@angular/router';
 import {HomePageComponent} from './pages/home-page/home-page.component';
 import {AboutPageComponent} from './pages/about-page/about-page.component';
 import {CreativePageComponent} from './pages/creative-page/creative-page.component';
-import {WorksPageComponent} from './pages/works-page/works-page.component';
+import {ProjectsPageComponent} from './pages/works-page/projects-page.component';
 import {NotFoundPageComponent} from "./pages/not-found-page/not-found-page.component";
 
 export const routes: Routes = [
@@ -16,7 +16,7 @@ export const routes: Routes = [
     },
     {
         path: "2",
-        component: WorksPageComponent
+        component: ProjectsPageComponent
     },
     {
         path: "0",

@@ -1,6 +1,5 @@
 <div class="absolute text-3xl flex flex-row" style="top: 5%; left: 5%">
-    <div class="flex flex-row align-items-center">
-
+    <div class="flex flex-row items-center">
         @if (logo) {
             <div class="logo">
                 <a class="text-3xl md:text-5xl rgb-shake-animation font-bold no-underline mr-4"
@@ -11,7 +10,9 @@
             <div class="text-2xl inline px-3 font-bold" [style.background-color]="color">
                 {{ page }}
             </div>
-            <app-clock/>
         </div>
     </div>
+</div>
+<div class="absolute text-3xl" style="top: 5%; right: 5%; filter: blur(1px)">
+    <app-clock/>
 </div>

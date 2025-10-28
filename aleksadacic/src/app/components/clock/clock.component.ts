@@ -9,7 +9,7 @@ import {DatePipe} from '@angular/common';
 })
 export class ClockComponent implements OnDestroy {
     now = signal(new Date());
-    private id = setInterval(() => this.now.set(new Date()), 1000);
+    private readonly id = setInterval(() => this.now.set(new Date()), 1000);
 
     ngOnDestroy() {
         clearInterval(this.id);
