@@ -17,5 +17,5 @@ import {RouterLink} from "@angular/router";
 export class NavComponent {
     @Input() logo: boolean = true;
     @Input() page: string = "";
-    @Input() color: string = "blue"
+    @Input() color: string = "var(--rgb-blue)"
 }

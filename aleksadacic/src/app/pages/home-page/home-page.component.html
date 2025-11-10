@@ -2,20 +2,20 @@
 
 <div class="flex flex-col mx-auto h-full justify-center items-center z-1 gap-2">
     <div class="flex flex-row aleksa-dacic font-bold">
-        <div class="flex flex-row justify-content-end mr-3" id="aleksa">
+        <div class="flex flex-row justify-content-end mr-3" [class.home-screen-buzz]="allDone" id="aleksa">
             <div>A</div>
-            <div id="L"><span>L</span></div>
+            <div id="L"><span>{{ done.replayL ? 'L' : 'Л' }}</span></div>
             <div>E</div>
-            <div id="K"><span>K</span></div>
-            <div id="SS"><span>S</span></div>
+            <div>K</div>
+            <div id="SS"><span>{{ done.replayS ? 'S' : 'С' }}</span></div>
             <div>A</div>
         </div>
-        <div id="dacic" class="flex flex-row justify-content-start">
-            <div id="D"><span>D</span></div>
+        <div id="dacic" class="flex flex-row justify-content-start" [class.home-screen-buzz]="allDone">
+            <div id="D"><span>{{ done.replayD ? 'D' : 'Д' }}</span></div>
             <div>A</div>
-            <div id="CH"><span>Č</span></div>
-            <div id="II"><span>I</span></div>
-            <div id="TJ"><span>Ć</span></div>
+            <div id="CH"><span>{{ done.replayCh ? 'Č' : 'Ч' }}</span></div>
+            <div id="II"><span>{{ done.replayI ? 'I' : 'И' }}</span></div>
+            <div id="TJ"><span>{{ done.replayTj ? 'Ć' : 'Ћ' }}</span></div>
         </div>
     </div>
     <div class="subtitle">

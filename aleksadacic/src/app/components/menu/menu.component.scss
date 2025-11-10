@@ -1,13 +1,13 @@
 .menu-button {
-  background: blue;
+  background: var(--rgb-blue);
 }
 
 .menu-button:hover {
-  background: green;
+  background: var(--rgb-green);
 }
 
 .menu-button.selected,
 .menu-button[data-selected="true"] {
-  background: green;
-  outline: green solid;
+  background: var(--rgb-green);
+  outline: var(--rgb-green) solid;
 }

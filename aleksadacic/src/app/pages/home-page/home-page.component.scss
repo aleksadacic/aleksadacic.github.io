@@ -2,10 +2,10 @@
 #aleksa, #dacic {
   line-height: 1 !important;
   user-select: none;
-  animation-name: rgb;
-  animation-iteration-count: infinite;
-  animation-duration: 8s;
-  animation-timing-function: steps(1, end);
+}
+
+.home-screen-buzz {
+  animation: rgb 7s steps(1) infinite;
 }
 
 .subtitle {
@@ -26,7 +26,7 @@
 
 #CH:hover:after {
   content: 'Ч';
-  color: blue;
+  color: var(--rgb-blue);
   font-style: normal;
 }
 
@@ -36,7 +36,7 @@
 
 #TJ:hover:after {
   content: 'Ћ';
-  color: red;
+  color: var(--rgb-red);
   font-style: normal;
 }
 
@@ -46,7 +46,7 @@
 
 #D:hover:after {
   content: 'Д';
-  color: green;
+  color: var(--rgb-green);
   font-style: normal;
 }
 
@@ -56,7 +56,7 @@
 
 #II:hover:after {
   content: 'И';
-  color: green;
+  color: var(--rgb-green);
   font-style: normal;
 }
 
@@ -66,7 +66,7 @@
 
 #L:hover:after {
   content: 'Л';
-  color: green;
+  color: var(--rgb-green);
   font-style: normal;
 }
 
@@ -76,7 +76,7 @@
 
 #SS:hover:after {
   content: 'С';
-  color: red;
+  color: var(--rgb-red);
   font-style: normal;
 }
 

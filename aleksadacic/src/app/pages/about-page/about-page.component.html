@@ -1,40 +1,40 @@
-<app-nav page="ABOUT" color="red"/>
+<div class="grain-animation"></div>
+<app-nav page="ABOUT" color="var(--rgb-red)"/>
 
-<div class="absolute flex flex-col justify-between text-2xl"
-     style="width: 90%; height: 75%; left: 50%; top:20%; transform: translate(-50%,0);">
-    <div style="height: 80%; scrollbar-width: none" class="overflow-y-auto">
-        <p>
-            <b>Software engineer</b>
-            with four years of industry experience building
-            full-stack solutions. Always
-            building stuff and experimenting with software engineering discipline towards expanding creativity
-            at its fullest. Recognised for clean architecture, critical thinking, and a passion for UX/UI. Seeking
-            opportunities where innovation, performance optimisation and collaboration are valued.
-        </p>
-        <div class="mt-6">
-            <p>
-                <br><b>software, libraries, tools, websites and apps.</b>
-                <br>
-                <br>Programming Languages (Java, JS, TS, C, Python),
-                <br>SQL and NoSQL databases,
-                <br>Frameworks (Spring, Angular, Django, ReactNative),
-                <br>Git,
-                <br>Debugging,
-                <br>Communication,
-                <br>Presentation,
-                <br>Documentation
+<div class="absolute flex flex-col justify-between text-xl page-container">
+    <div class="content-container">
+        <div class="irises-background"></div>
+        <div class="grain-animation"></div>
+        <!--        TODO gde god da se skroluje traba da se skroluje text-->
+        <div class="overflow-y-auto text-center bottom-0 absolute h-[15%] px-[20%] mx-auto mb-2 italic"
+             style="scrollbar-width: none; color: yellow">
+            <p class="mb-2 inline-flex px-2" style="background: rgba(0,0,0,80%)">
+                I’m Aleksa, a software engineer who treats software like art.
+            </p>
+            <p class="mb-2 inline-flex px-2" style="background: rgba(0,0,0,80%)">
+                I love building things that help people - whether that’s users of the apps I create or developers who
+                use the tools I build.
+            </p>
+            <p class="mb-2 inline-flex px-2" style="background: rgba(0,0,0,80%)">
+                Like in art, people should feel something after using a software.
+            </p>
+            <p class="mb-2 inline-flex px-2" style="background: rgba(0,0,0,80%)">
+                So when I craft my
+                code, I want people to feel a sense of familiarity with the final product, a feeling that they truly
+                own what they're using.
             </p>
         </div>
     </div>
     <div class="flex flex-row justify-between text-3xl p-4 items-center copy-trigger cursor-pointer"
-         style="background: blue; height: 50px; filter: blur(1px)" (click)="copyToClipboard(email.innerText)">
+         style="background: black; height: 50px; filter: blur(1px)"
+         (click)="copyToClipboard(email.innerText)">
         <div class="flex flex-row gap-2">
             <span class="font-mono" #email>aleksa.dacic99&#64;gmail.com</span>
             <img class="copy-icon" style="visibility: hidden" ngSrc="assets/icons/copy.svg" alt="COPY" height="36"
                  width="28" fetchpriority="high">
         </div>
         @if (successVisible) {
-            <span style="color: green" class="font-mono font-bold">COPIED TO CLIPBOARD</span>
+            <span class="rgb-green font-mono font-bold">COPIED TO CLIPBOARD</span>
         }
     </div>
 </div>

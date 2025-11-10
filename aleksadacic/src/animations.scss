@@ -45,55 +45,52 @@
   animation: stripe-frames 9s linear infinite;
 }
 
-
 @keyframes rgb {
-  0%, 10% {
+  0%, 10%, 57%, 100% {
     color: white;
     transform: translate(0, 0);
-    filter: blur(0)
+    filter: blur(0);
+    text-shadow: none;
   }
   12% {
-    color: red;
+    color: var(--rgb-red);
     transform: translate(-5%, 0);
-    filter: blur(2px)
-  }
-  13% {
-    color: blue;
-    transform: translate(5%, -2%);
-    filter: blur(2px)
+    filter: blur(3px);
+    text-shadow: -3px -2px 4px rgba(255, 0, 0, 0.4);
   }
   14% {
-    color: green
+    color: var(--rgb-blue);
+    transform: translate(5%, -2%);
+    filter: blur(3px);
+    text-shadow: 8px -2px 8px rgba(0, 0, 255, 0.4);
   }
-  16%, 50% {
+  16% {
+    color: var(--rgb-green);
+    text-shadow: -5px -2px 8px rgba(0, 255, 0, 0.4);
+  }
+  17%, 50% {
     color: white;
     transform: translate(0, 0);
-    filter: blur(0)
+    filter: blur(0);
+    text-shadow: none;
   }
   52% {
-    color: blue;
+    color: var(--rgb-blue);
     transform: translate(-5%, 0);
-    filter: blur(2px)
-  }
-  53% {
-    color: red;
-    transform: translate(5%, -2%);
-    filter: blur(1px)
+    filter: blur(3px);
+    text-shadow: rgba(0, 0, 255, 0.4) 0 12px 0;
   }
   54% {
-    color: green;
+    color: var(--rgb-red);
+    transform: translate(5%, -2%);
+    filter: blur(2px);
+    text-shadow: rgba(255, 0, 0, 0.4) -15px 0px 0;
+  }
+  56% {
+    color: var(--rgb-green);
     transform: translate(1%, -5%);
-    filter: blur(4px)
-  }
-  56%, 60% {
-    color: white;
-    transform: translate(0, 0);
-    filter: blur(1px)
-  }
-  60%, 100% {
-    color: white;
-    transform: translate(0, 0);
-    filter: blur(0)
+    filter: blur(4px);
+    text-shadow: rgba(0, 128, 0, 0.4) 0 12px 0;
   }
 }
 

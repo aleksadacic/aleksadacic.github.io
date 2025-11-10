@@ -3,16 +3,16 @@
         style="filter: blur(1px); bottom: 5%"
 >
     @if (!open()) {
-        <div style="background: blue" class="p-2 w-1/2 cursor-pointer flex justify-center" (click)="open.set(true)">
+        <div style="background: var(--rgb-blue)" class="p-2 w-1/2 cursor-pointer flex justify-center" (click)="open.set(true)">
             MENU
         </div>
     }
 
     @if (open()) {
         <div class="w-1/2 flex-col">
-            <div style="background: blue" class="flex flex-row py-2 px-4 justify-between">
+            <div style="background: var(--rgb-blue)" class="flex flex-row py-2 px-4 justify-between">
                 ALL CHANNELS
-                <div class="flex flex-row gap-2 cursor-pointer" style="color: green" (click)="open.set(false)">
+                <div class="flex flex-row gap-2 cursor-pointer rgb-green" (click)="open.set(false)">
                     EXIT
                     <img ngSrc="assets/icons/exit.svg" alt="EXIT" width="24" height="32" fetchpriority="high">
                 </div>
@@ -53,8 +53,8 @@
                     <span class="font-mono">03</span>
                 </div>
             </div>
-            <div style="background: blue" class="flex flex-col w-full py-2 px-4 mt-1">
-                <div class="flex flex-row justify-between items-center" style="color: green">
+            <div style="background: var(--rgb-blue)" class="flex flex-col w-full py-2 px-4 mt-1">
+                <div class="flex flex-row justify-between items-center rgb-green">
                     SELECT
                     <div class="flex flex-row gap-6">
                         <div class="flex flex-row">

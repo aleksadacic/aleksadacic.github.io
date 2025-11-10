@@ -1,9 +1,9 @@
 @if (visible()) {
-    <div style="color: green; filter: blur(1px);"
-         class="text-5xl font-extrabold select-none font-mono"
+    <div style="filter: blur(1px);"
+         class="text-5xl font-extrabold rgb-green select-none font-mono"
     >
-        <span class="menu-item font-mono"
-              style="color: green; text-shadow: green 0 2px 4px">CH {{ buffer() }}</span>
+        <span class="menu-item font-mono rgb-green"
+              style="text-shadow: var(--rgb-green) 0 2px 4px">CH {{ buffer() }}</span>
     </div>
 
     <!-- optional ghost input you already had; kept hidden but present -->

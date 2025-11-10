@@ -1,20 +1,30 @@
-<app-nav color="green" page="PROJECTS"></app-nav>
-<div class="absolute flex flex-col gap-10" style="width: 90%; left: 50%; top:50%; transform: translate(-50%,-50%);">
+<div class="grain-animation"></div>
+
+<app-nav color="var(--rgb-green)" page="PROJECTS"></app-nav>
+<div class="absolute flex flex-col gap-10 page-container">
     <div>
-        <div class="md:text-5xl mb-3 text-3xl">data querying</div>
-        <a class="text-blue-500 mb-3" style="word-break: break-word" href="https://github.com/aleksadacic/DataQuerying">https://github.com/aleksadacic/DataQuerying</a>
-        <div class="text-color">
+        <div class="mb-3 text-3xl themed-text">DataQuerying</div>
+        <a class="rgb-blue text-xl mb-3" style="word-break: break-word"
+           href="https://github.com/aleksadacic/DataQuerying">https://github.com/aleksadacic/DataQuerying</a>
+        <div class="text-color text-xl themed-text">
             <b>Data Querying</b> is a lightweight and intuitive library designed to make dynamic query building
             in <b>Spring Data JPA effortless</b>.
             <br><br>
-            Instead of manually crafting complex queries, this library provides a clean and type-safe DSL to
-            construct JPA queries at runtime. With objects like Query and SearchRequest, you can filter, sort,
-            and paginate data dynamically, all while keeping your code readable and maintainable.
+            <p>
+                DataQuerying is a Spring-based library I built to make complex database querying feel simple and
+                consistent across an application. Instead of writing custom repositories or endless JPA Criteria code,
+                you send a
+                structured request (filters, sorting, paging, projections) and the library builds the query for you. It
+                supports dynamic conditions, nested fields, and mapping results into DTOs, so the back end stays clean
+                and
+                the front end can ask for exactly what it needs. I made it because I was tired of copy-pasting query
+                logic across services—this turns it into one reusable, testable piece.
+            </p>
         </div>
     </div>
     <div>
         <div class="md:text-5xl mb-3 text-3xl">katarinadacic.com</div>
-        <a class="text-blue-500 mb-3" href="https://katarinadacic.com">https://katarinadacic.com</a>
+        <a class="rgb-blue mb-3" href="https://katarinadacic.com">https://katarinadacic.com</a>
         <div>
             Designed and developed a modern, responsive website for <b>Katarina Dačić</b>, an interior,
             exhibition, and set designer.
