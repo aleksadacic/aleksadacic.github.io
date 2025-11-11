@@ -9,13 +9,11 @@
 }
 
 .subtitle {
-  letter-spacing: 0.5rem;
   text-align: center;
   filter: blur(1.5px);
 }
 
 .aleksa-dacic {
-  font-size: 5rem;
   -webkit-text-stroke: 2px gray;
   filter: blur(1.5px);
 }
@@ -80,12 +78,3 @@
   font-style: normal;
 }
 
-@media screen and (max-width: 760px) {
-  .aleksa-dacic {
-    font-size: 3rem;
-  }
-
-  #centerpiece {
-    margin-left: 2rem;
-  }
-}

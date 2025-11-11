@@ -1,11 +1,13 @@
-<div class="flex flex-col justify-between mx-10 h-full py-5">
+<app-layout>
     <app-nav page="ABOUT" color="var(--rgb-red)"/>
-    <div class="content-container text-xl relative" [style.z-index]="500">
+    <div class="content-container h-[70vh] md:h-[50vh] text-md md:text-xl relative" [style.z-index]="500">
         <app-noise [fullscreen]="false" [opacity]="0.2"/>
-        <div [style.display]="display(1)" class="image image-1"></div>
-        <div [style.display]="display(2)" class="image image-2"></div>
-        <div [style.display]="display(3)" class="image image-3"></div>
-        <div [style.display]="display(4)" class="image image-4"></div>
+        <div class="image-wrapper">
+            <div [class.active]="visibleIndex === 1" class="image image-1"></div>
+            <div [class.active]="visibleIndex === 2" class="image image-2"></div>
+            <div [class.active]="visibleIndex === 3" class="image image-3"></div>
+            <div [class.active]="visibleIndex === 4" class="image image-4"></div>
+        </div>
         <div class="text-center w-full margin-auto italic relative bottom-4"
              style="scrollbar-width: none; color: yellow; transform: translate(0, -100%)">
             <p [style.display]="display(1)" class="mb-2 max-w-[80%] inline-flex px-2"
@@ -27,4 +29,4 @@
         </div>
     </div>
     <app-menu/>
-</div>
+</app-layout>

@@ -3,6 +3,7 @@ import {NavComponent} from '../../components/nav/nav.component';
 import {MenuComponent} from "../../components/menu/menu.component";
 import {PROJECTS} from "./projects";
 import {NoiseComponent} from "../../components/noise/noise.component";
+import {LayoutComponent} from "../../components/layout/layout.component";
 
 @Component({
     selector: 'app-projects-page',
@@ -10,7 +11,8 @@ import {NoiseComponent} from "../../components/noise/noise.component";
     imports: [
         NavComponent,
         MenuComponent,
-        NoiseComponent
+        NoiseComponent,
+        LayoutComponent
     ],
     templateUrl: './projects-page.component.html',
     styleUrl: './projects-page.component.scss'

@@ -1,5 +1,5 @@
 <div
-        class="relative mx-auto w-full flex items-center justify-center text-2xl font-bold select-none font-mono"
+        class="relative mx-auto w-full flex items-center justify-center text-lg md:text-2xl font-bold select-none font-mono"
         style="filter: blur(1px); bottom: 5%;"
         [style.z-index]="open() ? 99999 : 201"
 >
@@ -9,17 +9,36 @@
     </div>
 
     @if (open()) {
-        <div class="absolute w-full flex-col" style="bottom: 0">
+        <div class="absolute w-full flex-col overflow-hidden" style="bottom: 0">
             <div style="background: var(--rgb-blue)" class="flex flex-row py-2 px-4 justify-between">
                 ALL CHANNELS
-                <div class="flex flex-row gap-2 cursor-pointer rgb-yellow" (click)="open.set(false)">
+                <div class="flex flex-row items-center gap-2 cursor-pointer rgb-yellow" (click)="open.set(false)">
                     CLOSE
-                    <img ngSrc="assets/icons/exit.svg" alt="EXIT" width="24" height="32" fetchpriority="high">
+                    <img
+                            ngSrc="assets/icons/exit.svg"
+                            alt="EXIT"
+                            class="h-5 w-auto md:h-7"
+                            width="24"
+                            height="32"
+                            fetchpriority="high"
+                    >
                 </div>
             </div>
             <div
                 #menuBtn
                 class="flex flex-col mt-1 w-full py-2 px-4 menu-button"
+                role="menuitem"
+                tabindex="-1"
+                (click)="navigate('0')"
+            >
+                <div class="flex flex-row justify-between items-center cursor-pointer">
+                    <span>HOME</span>
+                    <span class="font-mono">00</span>
+                </div>
+            </div>
+            <div
+                #menuBtn
+                class="flex flex-col w-full py-2 px-4 menu-button"
                 role="menuitem"
                 tabindex="-1"
                 (click)="navigate('1')"
@@ -60,10 +79,11 @@
                 role="menuitem"
                 tabindex="-1"
             >
-                <div class="flex flex-row gap-4 items-center rgb-yellow">
+                <div class="flex flex-row gap-1 text-sm md:text-xl md:gap-4 items-center rgb-yellow">
                     <span #email>{{ copySuccessVisible ? 'COPIED!' : 'ALEKSA.DACIC99@GMAIL.COM' }}</span>
                     @if (!copySuccessVisible) {
-                        <img class="copy-icon" ngSrc="assets/icons/copy.svg" alt="COPY"
+                        <img ngSrc="assets/icons/copy.svg" alt="COPY"
+                             class="copy-icon h-5 w-auto md:h-7"
                              height="24"
                              width="24" fetchpriority="high">
                     }
@@ -73,14 +93,16 @@
                 <div class="flex flex-row justify-between items-center rgb-yellow">
                     SELECT
                     <div class="flex flex-row gap-6">
-                        <div class="flex flex-row">
+                        <div class="flex flex-row items-center">
                             UP
-                            <img ngSrc="assets/icons/caret-up.svg" alt="UP" width="32" height="32" fetchpriority="high">
+                            <img ngSrc="assets/icons/caret-up.svg" alt="UP" width="32" height="32" fetchpriority="high"
+                                 class="h-5 w-auto md:h-7"
+                            >
                         </div>
-                        <div class="flex flex-row">
+                        <div class="flex flex-row items-center">
                             DOWN
                             <img ngSrc="assets/icons/caret-down.svg" alt="DOWN" width="32" height="32"
-                                 fetchpriority="high">
+                                 fetchpriority="high" class="h-5 w-auto md:h-7">
                         </div>
                     </div>
                 </div>

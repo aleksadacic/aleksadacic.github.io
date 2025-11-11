@@ -1,6 +1,6 @@
 <div class="flex flex-col justify-between mx-10 h-full py-5">
     <div class="flex flex-col mx-auto h-full justify-center items-center z-1 gap-2">
-        <div class="flex flex-row aleksa-dacic font-bold">
+        <div class="flex flex-row aleksa-dacic text-4xl md:text-6xl font-bold">
             <div class="flex flex-row justify-content-end mr-3" [class.home-screen-buzz]="allDone" id="aleksa">
                 <div>A</div>
                 <div id="L"><span>{{ done.replayL ? 'L' : 'Л' }}</span></div>
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="subtitle">
-            <p class="text-2xl my-2">SOFTWARE ENGINEER</p>
+            <span class="text-lg md:text-2xl tracking-widest md:tracking-[0.5rem] my-2">SOFTWARE ENGINEER</span>
         </div>
     </div>
     <app-menu/>
