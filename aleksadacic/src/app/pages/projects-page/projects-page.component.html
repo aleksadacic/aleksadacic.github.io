@@ -5,11 +5,11 @@
         <app-noise [fullscreen]="false" [opacity]="0.2"/>
         <span class="mb-5 select-none">PROJECTS</span>
         @for (project of PROJECTS; track $index) {
-            <a class="flex flex-row gap-12 items-center justify-center w-full underline md:no-underline hover:underline"
+            <a class="flex flex-row gap-5 md:gap-12 items-center justify-center w-full underline md:no-underline hover:underline"
                [href]="project.link" target="_blank">
                 <span class="w-1/2 flex self-start justify-end" style="color: #aaaaaa">{{ project.name }}</span>
                 <span class="w-1/2 flex self-start justify-start">
-                    <div class="w-3/5">
+                    <div class="w-full md:w-3/5">
                        {{ project.description }}
                     </div>
                 </span>
