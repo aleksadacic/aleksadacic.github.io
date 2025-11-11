@@ -23,21 +23,20 @@ import {FlickerService} from "../../services/flicker.service";
 })
 export class MenuComponent {
     open = signal(false);
+    selectedIndex = -1;
+    protected copySuccessVisible: boolean = false;
     private readonly router = inject(Router);
     private readonly flickerService = inject(FlickerService);
-
     @ViewChildren('menuBtn', {read: ElementRef})
-    private menuButtons!: QueryList<ElementRef<HTMLElement>>;
-
-    private renderer = inject(Renderer2);
-    selectedIndex = 0;
+    private readonly menuButtons!: QueryList<ElementRef<HTMLElement>>;
+    private readonly renderer = inject(Renderer2);
 
     constructor() {
         // If 'open' is a signal in your component, reselect first item when it opens
         effect(() => {
             // @ts-ignore if open is declared elsewhere in your file
             if (this.open?.()) {
-                this.selectedIndex = 0;
+                this.selectedIndex = -1;
                 queueMicrotask(() => this.applySelection());
             }
         });
@@ -76,6 +75,20 @@ export class MenuComponent {
         }
     }
 
+    navigate(path: string) {
+        this.router.navigate([path]).then();
+    }
+
+    copyToClipboard(innerText: string) {
+        navigator.clipboard.writeText(innerText.toLowerCase()).then(() => {
+            this.flickerService.trigger(10);
+            this.copySuccessVisible = true;
+            setTimeout(() => {
+                this.copySuccessVisible = false;
+            }, 2000)
+        });
+    }
+
     private applySelection() {
         const items = this.menuButtons.toArray();
         for (let i = 0; i < items.length; i++) {
@@ -90,9 +103,5 @@ export class MenuComponent {
                 el.removeAttribute('data-selected');
             }
         }
-    }
-
-    navigate(path: string) {
-        this.router.navigate([path]).then();
     }
 }

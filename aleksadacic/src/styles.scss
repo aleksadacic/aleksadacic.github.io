@@ -16,6 +16,7 @@ body {
   --rgb-green: rgb(0, 164, 0);
   --rgb-blue: rgb(0, 0, 255);
   --rgb-red: rgb(255, 0, 0);
+  --rgb-yellow: rgb(255, 255, 0);
 }
 
 .rgb-green {
@@ -30,6 +31,10 @@ body {
   color: var(--rgb-red);
 }
 
+.rgb-yellow {
+  color: var(--rgb-yellow);
+}
+
 .logo {
   filter: blur(1px);
   -webkit-text-stroke: 1px black;
@@ -37,46 +42,6 @@ body {
 
 .rgb-shake-animation {
   animation: rgb 8s steps(1) infinite;
-}
-
-.grain-animation:after {
-  animation: grain 0.5s steps(1) infinite;
-  content: "";
-  background-image: url("assets/noise-lg.webp");
-  height: 300vh;
-  width: 300vw;
-  opacity: 0.1;
-  position: fixed;
-  filter: blur(1px) contrast(90%);
-  top: -100vh;
-  left: -100vw;
-}
-
-.irises-background {
-  content: "";
-  background-image: url("assets/irises.webp");
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-
-.page-container {
-  width: 90%;
-  height: 75%;
-  left: 50%;
-  top: 20%;
-  transform: translate(-50%, 0);
-}
-
-.content-container {
-  height: 80%;
-  scrollbar-width: none;
-  text-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px;
-  filter: blur(0.05rem);
 }
 
 .themed-text {

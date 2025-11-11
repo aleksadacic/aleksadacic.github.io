@@ -3,11 +3,17 @@
 }
 
 .menu-button:hover {
-  background: var(--rgb-green);
+  background: var(--rgb-yellow);
+  color: var(--rgb-blue);
+}
+
+.email-button {
+  background: var(--rgb-blue);
 }
 
 .menu-button.selected,
 .menu-button[data-selected="true"] {
-  background: var(--rgb-green);
-  outline: var(--rgb-green) solid;
+  background: var(--rgb-yellow);
+  outline: var(--rgb-yellow) solid;
+  color: var(--rgb-blue);
 }

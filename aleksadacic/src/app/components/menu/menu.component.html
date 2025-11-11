@@ -1,19 +1,19 @@
 <div
-        class="absolute mx-auto w-full flex items-center justify-center text-2xl font-bold select-none font-mono"
-        style="filter: blur(1px); bottom: 5%"
+        class="relative mx-auto w-full flex items-center justify-center text-2xl font-bold select-none font-mono"
+        style="filter: blur(1px); bottom: 5%;"
+        [style.z-index]="open() ? 99999 : 201"
 >
-    @if (!open()) {
-        <div style="background: var(--rgb-blue)" class="p-2 w-1/2 cursor-pointer flex justify-center" (click)="open.set(true)">
-            MENU
-        </div>
-    }
+    <div style="background: var(--rgb-blue)" class="p-2 w-full cursor-pointer flex justify-center"
+         (click)="open.set(true)">
+        MENU
+    </div>
 
     @if (open()) {
-        <div class="w-1/2 flex-col">
+        <div class="absolute w-full flex-col" style="bottom: 0">
             <div style="background: var(--rgb-blue)" class="flex flex-row py-2 px-4 justify-between">
                 ALL CHANNELS
-                <div class="flex flex-row gap-2 cursor-pointer rgb-green" (click)="open.set(false)">
-                    EXIT
+                <div class="flex flex-row gap-2 cursor-pointer rgb-yellow" (click)="open.set(false)">
+                    CLOSE
                     <img ngSrc="assets/icons/exit.svg" alt="EXIT" width="24" height="32" fetchpriority="high">
                 </div>
             </div>
@@ -53,8 +53,24 @@
                     <span class="font-mono">03</span>
                 </div>
             </div>
+            <div
+                #menuBtn
+                class="flex flex-col w-full py-2 px-4 cursor-pointer email-button my-1"
+                (click)="copyToClipboard(email.innerText)"
+                role="menuitem"
+                tabindex="-1"
+            >
+                <div class="flex flex-row gap-4 items-center rgb-yellow">
+                    <span #email>{{ copySuccessVisible ? 'COPIED!' : 'ALEKSA.DACIC99@GMAIL.COM' }}</span>
+                    @if (!copySuccessVisible) {
+                        <img class="copy-icon" ngSrc="assets/icons/copy.svg" alt="COPY"
+                             height="24"
+                             width="24" fetchpriority="high">
+                    }
+                </div>
+            </div>
             <div style="background: var(--rgb-blue)" class="flex flex-col w-full py-2 px-4 mt-1">
-                <div class="flex flex-row justify-between items-center rgb-green">
+                <div class="flex flex-row justify-between items-center rgb-yellow">
                     SELECT
                     <div class="flex flex-row gap-6">
                         <div class="flex flex-row">
@@ -63,7 +79,8 @@
                         </div>
                         <div class="flex flex-row">
                             DOWN
-                            <img ngSrc="assets/icons/caret-down.svg" alt="DOWN" width="32" height="32" fetchpriority="high">
+                            <img ngSrc="assets/icons/caret-down.svg" alt="DOWN" width="32" height="32"
+                                 fetchpriority="high">
                         </div>
                     </div>
                 </div>

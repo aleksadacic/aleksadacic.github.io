@@ -2,8 +2,8 @@ import {Routes} from '@angular/router';
 import {HomePageComponent} from './pages/home-page/home-page.component';
 import {AboutPageComponent} from './pages/about-page/about-page.component';
 import {CreativePageComponent} from './pages/creative-page/creative-page.component';
-import {ProjectsPageComponent} from './pages/works-page/projects-page.component';
 import {NotFoundPageComponent} from "./pages/not-found-page/not-found-page.component";
+import {ProjectsPageComponent} from "./pages/projects-page/projects-page.component";
 
 export const routes: Routes = [
     {
@@ -11,12 +11,12 @@ export const routes: Routes = [
         component: AboutPageComponent
     },
     {
-        path: "3",
-        component: CreativePageComponent
-    },
-    {
         path: "2",
         component: ProjectsPageComponent
+    },
+    {
+        path: "3",
+        component: CreativePageComponent
     },
     {
         path: "0",

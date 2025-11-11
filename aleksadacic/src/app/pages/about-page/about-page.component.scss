@@ -1,3 +1,36 @@
 .copy-trigger:hover .copy-icon {
   visibility: visible !important;
 }
+
+.image {
+  content: "";
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+.image-1 {
+  background-image: url("../../../assets/van-gogh-Irises-1890.webp");
+}
+
+.image-2 {
+  background-image: url("../../../assets/van-gogh-Irises-1889.webp");
+}
+
+.image-3 {
+  background-image: url("../../../assets/van-gogh-sunflowers.webp");
+}
+
+.image-4 {
+  background-image: url("../../../assets/van-gogh-wheat-field-with-cypresses.webp");
+}
+
+.content-container {
+  scrollbar-width: none;
+  text-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px;
+  height: 50vh;
+  width: 100%;
+  filter: blur(0.04rem);
+}

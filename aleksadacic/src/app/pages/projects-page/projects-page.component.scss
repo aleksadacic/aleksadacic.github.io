@@ -1,0 +1,20 @@
+.credits-background {
+  position: relative;
+  overflow: hidden;
+  filter: blur(0.04rem);
+}
+
+//TODO mozda neka bolja slika
+.credits-background::before {
+  background-image: url("/assets/clouds.webp");
+  content: "";
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(100%) blur(2px) brightness(25%);
+}
