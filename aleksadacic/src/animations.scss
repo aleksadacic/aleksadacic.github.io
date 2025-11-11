@@ -1,20 +1,3 @@
-@keyframes stripe-frames {
-  0% {
-    top: -20vh;
-  }
-  40% {
-    top: 120vh; /* finishes movement in 4s out of 9s total (≈44%) */
-  }
-  100% {
-    top: 120vh; /* stays here for remaining 5s */
-  }
-}
-
-.stripe {
-  position: absolute;
-  animation: stripe-frames 9s linear infinite;
-}
-
 @keyframes rgb {
   0%, 10%, 57%, 100% {
     color: white;
