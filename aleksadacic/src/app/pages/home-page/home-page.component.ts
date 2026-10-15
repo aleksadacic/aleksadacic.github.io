@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {MenuComponent} from "../../components/menu/menu.component";
 
 type CounterKey = 'replayL' | 'replayS' | 'replayD' | 'replayCh' | 'replayI' | 'replayTj';
@@ -10,6 +10,7 @@ type CounterKey = 'replayL' | 'replayS' | 'replayD' | 'replayCh' | 'replayI' | '
         MenuComponent
     ],
     templateUrl: './home-page.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {

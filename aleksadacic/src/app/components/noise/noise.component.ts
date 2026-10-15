@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, DestroyRef, ElementRef, inject, Input, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, DestroyRef, ElementRef, inject, Input, ViewChild, ChangeDetectionStrategy} from '@angular/core';
 
 const FRAME_COUNT = 6;
 const FRAME_SIZE = 200;
@@ -42,6 +42,7 @@ function getFrames(): string[] {
     selector: 'app-noise',
     imports: [],
     templateUrl: './noise.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './noise.component.scss'
 })
 export class NoiseComponent implements AfterViewInit {

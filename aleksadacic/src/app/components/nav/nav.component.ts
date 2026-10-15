@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
 import {UntilDestroy} from "@ngneat/until-destroy";
 import {ClockComponent} from "../clock/clock.component";
 import {RouterLink} from "@angular/router";
@@ -12,6 +12,7 @@ import {RouterLink} from "@angular/router";
         RouterLink
     ],
     templateUrl: './nav.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './nav.component.scss'
 })
 export class NavComponent {

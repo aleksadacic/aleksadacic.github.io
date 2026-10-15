@@ -1,10 +1,11 @@
-import {Component, signal, OnDestroy} from '@angular/core';
+import {Component, signal, OnDestroy, ChangeDetectionStrategy} from '@angular/core';
 import {DatePipe} from '@angular/common';
 
 @Component({
     selector: 'app-clock',
     standalone: true,
     imports: [DatePipe],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './clock.component.html',
 })
 export class ClockComponent implements OnDestroy {

@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, HostListener, signal, viewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener, signal, viewChild, ChangeDetectionStrategy} from '@angular/core';
 import {NavComponent} from '../../components/nav/nav.component';
 import {MenuComponent} from "../../components/menu/menu.component";
 import {NgOptimizedImage} from "@angular/common";
@@ -14,6 +14,7 @@ import {LayoutComponent} from "../../components/layout/layout.component";
         LayoutComponent
     ],
   templateUrl: './creative-page.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './creative-page.component.scss'
 })
 export class CreativePageComponent implements AfterViewInit {

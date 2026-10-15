@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, ChangeDetectionStrategy} from '@angular/core';
 import {NavComponent} from '../../components/nav/nav.component';
 import {NoiseComponent} from "../../components/noise/noise.component";
 import {MenuComponent} from "../../components/menu/menu.component";
@@ -14,6 +14,7 @@ import {LayoutComponent} from "../../components/layout/layout.component";
         LayoutComponent
     ],
     templateUrl: './about-page.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './about-page.component.scss'
 })
 export class AboutPageComponent implements AfterViewInit {

@@ -1,13 +1,14 @@
 import {
-    Component,
-    effect,
-    ElementRef,
-    HostListener,
-    inject,
-    QueryList,
-    Renderer2,
-    signal,
-    ViewChildren
+  Component,
+  effect,
+  ElementRef,
+  HostListener,
+  inject,
+  QueryList,
+  Renderer2,
+  signal,
+  ViewChildren,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
 import {Router} from "@angular/router";
@@ -19,6 +20,7 @@ import {FlickerService} from "../../services/flicker.service";
         NgOptimizedImage
     ],
     templateUrl: './menu.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './menu.component.scss'
 })
 export class MenuComponent {

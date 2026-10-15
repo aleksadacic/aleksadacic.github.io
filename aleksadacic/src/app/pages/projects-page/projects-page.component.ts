@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {NavComponent} from '../../components/nav/nav.component';
 import {MenuComponent} from "../../components/menu/menu.component";
 import {PROJECTS} from "./projects";
@@ -15,6 +15,7 @@ import {LayoutComponent} from "../../components/layout/layout.component";
         LayoutComponent
     ],
     templateUrl: './projects-page.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './projects-page.component.scss'
 })
 export class ProjectsPageComponent {

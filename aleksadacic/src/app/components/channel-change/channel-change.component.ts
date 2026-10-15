@@ -1,4 +1,4 @@
-import {Component, HostListener, inject, signal} from '@angular/core';
+import {Component, HostListener, inject, signal, ChangeDetectionStrategy} from '@angular/core';
 import {Router} from "@angular/router";
 import {UntilDestroy} from "@ngneat/until-destroy";
 
@@ -7,6 +7,7 @@ import {UntilDestroy} from "@ngneat/until-destroy";
     selector: 'app-channel-change',
     imports: [],
     templateUrl: './channel-change.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './channel-change.component.scss'
 })
 export class ChannelChangeComponent {
