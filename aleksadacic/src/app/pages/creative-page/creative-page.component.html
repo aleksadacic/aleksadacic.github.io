@@ -1,21 +1,33 @@
 <app-layout>
     <app-nav color="var(--rgb-blue)" page="CREATIVE"></app-nav>
-    <div class="flex flex-row gap-5 overflow-x-auto py-2 posters h-[140dvw] md:h-[80%]"
-         style="z-index: 9999; scrollbar-width: thin">
-        <a href="https://www.instagram.com/izginuce35/" target="_blank">
-            <img ngSrc="assets/creative/izginuce-35-poster.webp" alt="izginuce-35" height="2022" width="1338">
-        </a>
-        <a href="https://www.instagram.com/izginuce/" target="_blank">
-            <img ngSrc="assets/creative/izginuce-poster.webp" alt="izginuce" height="2022" width="1338">
-        </a>
-        <a href="https://www.deezer.com/us/playlist/9303156122" target="_blank">
-            <img ngSrc="assets/creative/letnji-zur-jadran-poster.webp" alt="letnji-zur-jadran" height="2022"
-                 width="1338">
-        </a>
-        <a href="https://www.deezer.com/us/playlist/9381878122" target="_blank">
-            <img ngSrc="assets/creative/letnji-zur-latino-poster.webp" alt="letnji-zur-latino" height="2000"
-                 width="1323">
-        </a>
+    <div class="relative h-[140dvw] md:h-[80%]" style="z-index: 9999">
+        <div #posters class="flex flex-row gap-5 overflow-x-auto py-2 posters h-full" (scroll)="updateChevrons()">
+            <a href="https://www.instagram.com/izginuce35/" target="_blank">
+                <img ngSrc="assets/creative/izginuce-35-poster.webp" alt="izginuce-35" height="2022" width="1338">
+            </a>
+            <a href="https://www.instagram.com/izginuce/" target="_blank">
+                <img ngSrc="assets/creative/izginuce-poster.webp" alt="izginuce" height="2022" width="1338">
+            </a>
+            <a href="https://www.deezer.com/us/playlist/9303156122" target="_blank">
+                <img ngSrc="assets/creative/letnji-zur-jadran-poster.webp" alt="letnji-zur-jadran" height="2022"
+                     width="1338">
+            </a>
+            <a href="https://www.deezer.com/us/playlist/9381878122" target="_blank">
+                <img ngSrc="assets/creative/letnji-zur-latino-poster.webp" alt="letnji-zur-latino" height="2000"
+                     width="1323">
+            </a>
+        </div>
+
+        @if (canScrollLeft()) {
+            <button class="chevron left-2" aria-label="Previous poster" (click)="scroll(-1)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8"/></svg>
+            </button>
+        }
+        @if (canScrollRight()) {
+            <button class="chevron right-2" aria-label="Next poster" (click)="scroll(1)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg>
+            </button>
+        }
     </div>
     <app-menu/>
 </app-layout>
