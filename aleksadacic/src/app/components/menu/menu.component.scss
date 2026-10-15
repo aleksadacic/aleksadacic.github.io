@@ -17,3 +17,14 @@
   outline: var(--rgb-yellow) solid;
   color: var(--rgb-blue);
 }
+
+// Arrow-key and channel-number controls need a keyboard, so only hint at them on pointer devices
+.keyboard-hint {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .keyboard-hint {
+    display: flex;
+  }
+}
