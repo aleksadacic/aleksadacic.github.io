@@ -1,13 +1,15 @@
 #noise {
+  display: block;
   pointer-events: none;
-  background-repeat: repeat;
-  background-size: 400px 400px;
   mix-blend-mode: soft-light;
+  image-rendering: pixelated;
 }
 
 .noise-fullscreen {
   position: fixed;
   inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .noise-overlay {
